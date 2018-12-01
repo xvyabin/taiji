@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>太极</title>
+  <style>
+  	.yinyang{
+  height:200px;
+  width:200px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #f7f7f7 1%,#f7f7f7 30%,#f7f7f7 30%,#f7f7f7 40%,#f7f7f7 40%,#f7f7f7 41%,#f7f7f7 50%,#050000 51%,#f7f7f7 51%,#050000 51%,#050000 58%,#050000 62%,#050000 100%);
+  position: relative;
+  margin: 200px auto;
+}
+.yinyang::before{
+  content: '';	  
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#f7f7f7;
+  position: absolute;
+  top: 50px;
+  left:0 ;
+  border:40px solid #050000 ;
+}
+/*.yinyang>.one>.circle{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  position: absolute;
+  left:40px;
+  top:45px;
+  background:#f7f7f7;
+  
+}
+.yinyang>.two>.circle{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  position: absolute;
+  left:40px;
+  top:45px;
+  background: black;
+  
+}*/
+.yinyang::after{
+  content:'';	
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#050000;
+  position: absolute;
+  top: 50px;
+  right:0;
+  border: 40px solid #f7f7f7;
+  
+}
+body{
+	background: yellow;
+}
+.yinyang:hover{
+    /*-webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+    -webkit-transition:-webkit-transform 1s linear;
+    transition:transform 5s linear; */
+    -webkit-animation: spin 5s linear infinite; 
+    animation: spin 5s linear infinite;
+}
+@-webkit-keyframes spin {
+  from {
+      -webkit-transform: rotate(90deg);
+  }
+  to {
+      -webkit-transform: rotate(450deg);
+  }
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(90deg);
+  }
+  to {
+      transform: rotate(450deg);
+  }
+}
+
+  </style>
+
+</head>
+<body>
+  <div class="yinyang">
+   
+  </div>
+ 
+</body>
+</html>
